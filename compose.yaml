@@ -19,6 +19,7 @@ x-app: &default-app
   tty: true
   volumes:
     - "${PWD}/public:/app/public"  # Absolute path for ./public
+  command: sh -c "cp .env.example .env"  # Copy .env.example to .env before starting
 
 x-assets: &default-assets
   build:
